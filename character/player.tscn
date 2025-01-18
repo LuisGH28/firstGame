@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4j8k02ota0j5"]
+
+[ext_resource type="Texture2D" uid="uid://bavinib3xhx5y" path="res://character/Assets/tile_0000.png" id="1_q47sk"]
+[ext_resource type="Script" path="res://character/player.gd" id="1_r3bcu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_17tve"]
+radius = 34.0
+height = 70.0
+
+[node name="Player" type="CharacterBody2D" groups=["Enemigos", "jugador"]]
+position = Vector2(69, 79)
+script = ExtResource("1_r3bcu")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(164, 109)
+scale = Vector2(3, 2.118)
+texture = ExtResource("1_q47sk")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(163, 109)
+shape = SubResource("CapsuleShape2D_17tve")
